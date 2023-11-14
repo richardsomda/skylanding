@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Portfolio from "../components/Portfolio";
 import Contact from "../components/Contact";
 import Dropdown from "../components/Dropdown";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   FaFacebook,
   FaInstagram,
@@ -10,6 +11,7 @@ import {
   FaTwitterSquare,
 } from "react-icons/fa";
 const Page = () => {
+  
   return (
     <div>
       {/* navbar */}
@@ -20,7 +22,13 @@ const Page = () => {
       {/* navbar */}
 
       {/* hero section  */}
-      <div className="p-5 flex flex-col gap-10 md:p-10 lg:p-40 lg:flex-row ">
+      <motion.div
+      initial={{ opacity: 0, height: 0 }}
+      animate={{ opacity: 1, height: "auto" }}
+      exit={{ opacity: 0, height: 0 }}
+      transition={{ duration: 0.7 }}
+
+      className="p-5 flex flex-col gap-10 md:p-10 lg:p-40 lg:flex-row ">
         <div className="w-20 h-1 bg-herotext  md:w-48 md:h-2 lg:w-40"></div>
         <div className="">
           <h1 className="text-4xl font-bold pb-3 text-herotext md:text-8xl tracking-wide lg:text-7xl">
@@ -40,11 +48,17 @@ const Page = () => {
         <div className=" ">
           <img src="/image/heroimg.png" alt="" className="lg:w-[170rem]" />
         </div>
-      </div>
+      </motion.div>
       {/* hero section  */}
 
       {/* services */}
-      <div className="bg-black h-auto text-white p-5 py-10 flex flex-col md:p-10 lg:p-40 lg:flex-row lg:gap-5">
+      <motion.div 
+      initial={{ opacity: 0, height: 0 }}
+      animate={{ opacity: 1, height: 'auto' }}
+      exit={{ opacity: 0, height: 0 }}
+      transition={{ duration: 0.3 }}
+
+      className="bg-black h-auto text-white p-5 py-10 flex flex-col md:p-10 lg:p-40 lg:flex-row lg:gap-5">
         <div className="lg:text-xl py-5 flex gap-2">
           <span>Our</span>
           <span>Services</span>
@@ -97,7 +111,7 @@ const Page = () => {
             />
           </div>
         </div>
-      </div>
+      </motion.div>
       {/* services */}
 
       {/* portfolio */}
@@ -147,7 +161,7 @@ const Page = () => {
         </div>
       </div>
       {/* portfolio */}
-      <div></div>
+
       {/* contact */}
       <div className="bg-black text-white p-5 flex flex-col gap-5 md:p-10 lg:p-40 lg:flex-row">
         <div className=" md:text-4xl py-4 flex  gap-1 lg:text-2xl lg:w-1/4 ">
@@ -237,19 +251,19 @@ const Page = () => {
 
         <div>
           <div className="md:text-3xl pt-10">
-            <p className="text-center">
-              Copyright © 2032 Creativo®. All rights reserved.
+            <p className="text-center text-[10px]">
+              Copyright © 2023 SkyTech. All rights reserved.
             </p>
           </div>
-          <div className="text-3xl flex justify-center items-center gap-5">
+          <div className=" flex justify-center items-center gap-5">
             <div>
-              <FaLinkedin className="text-4xl  md:text-7xl my-2" />
+              <FaLinkedin className="text-2xl  md:text-7xl my-2" />
             </div>
             <div>
-              <FaInstagram className="text-4xl md:text-7xl my-2" />
+              <FaInstagram className="text-2xl md:text-7xl my-2" />
             </div>
             <div>
-              <FaFacebook className="text-4xl md:text-7xl my-2" />
+              <FaFacebook className="text-2xl md:text-7xl my-2" />
             </div>
           </div>
         </div>

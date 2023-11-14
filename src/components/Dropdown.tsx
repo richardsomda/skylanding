@@ -1,6 +1,7 @@
-'use client'
-import React, { useState } from 'react';
-import { FaChevronDown , FaChevronUp} from 'react-icons/fa';
+"use client";
+import React, { useState } from "react";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface DropdownProps {
   header: React.ReactNode;
@@ -16,12 +17,16 @@ const Dropdown: React.FC<DropdownProps> = ({ header, content }) => {
 
   return (
     <div className="relative ">
-      <div onClick={toggleDropdown} className="cursor-pointer py-3 flex justify-between items-center  border-b-2 border-white border-opacity-[50%] md:text-5xl  lg:text-4xl">
+      <div
+        onClick={toggleDropdown}
+        className="cursor-pointer py-3 flex justify-between items-center  border-b-2
+       border-white border-opacity-[50%] md:text-5xl  lg:text-4xl "
+      >
         {header}
-        <FaChevronDown/>
+        <FaChevronDown />
       </div>
       {isOpen && (
-          <div className="mt-5 text-white  shadow-md rounded-md p-4 opacity-[80%] md:text-4xl lg:text-3xl">
+        <div className="mt-5 text-white  shadow-md rounded-md p-4 opacity-[80%] md:text-4xl lg:text-3xl ">
           {content}
         </div>
       )}
