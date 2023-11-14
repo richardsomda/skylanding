@@ -1,7 +1,7 @@
-'use client'
+"use client";
 // src/components/Navbar.tsx
-import React, { useState } from 'react';
-import { FaBars } from 'react-icons/fa';
+import React, { useState } from "react";
+import { FaBars } from "react-icons/fa";
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -13,28 +13,28 @@ const Navbar = () => {
   return (
     <div className="relative">
       <div className="flex justify-between px-5 py-5">
-        <div className="text-2xl font-medium">
+        <div className="text-2xl font-bold md:text-5xl ">
           <h1>Skytech</h1>
         </div>
-        <div className="text-2xl font-bold md:hidden" onClick={toggleDropdown}>
+        <div
+          className="text-2xl font-bold md:hidden text-herotext"
+          onClick={toggleDropdown}
+        >
           <FaBars />
         </div>
         <nav className="hidden md:flex items-center space-x-8 gap-5 text-2xl">
-          <a href="#" className="tblack">
+          <a href="#" className="">
             Home
           </a>
           <a href="#" className="">
-            Services
+            About
           </a>
           <a href="#" className="">
-            About Us
+            Portfolio
           </a>
-          <a href="#" className="">
-            Why Choose Us
-          </a>
-          <a href="#" className="">
-            Testimonial
-          </a>
+          <div>
+            <button className="bg-herotext text-white p-4 rounded-2xl">Get In Touch</button>
+          </div>
         </nav>
       </div>
       {isDropdownOpen && (
@@ -43,17 +43,15 @@ const Navbar = () => {
             <li className="p-1">
               <a href="#">Home</a>
             </li>
-            <li className="p-1">
-              <a href="#">Services</a>
-            </li>
+
             <li className="p-1">
               <a href="#">About Us</a>
             </li>
             <li className="p-1">
-              <a href="#">Why Choose Us</a>
+              <a href="#">Blog</a>
             </li>
             <li className="p-1">
-              <a href="#">Testimonial</a>
+              <a href="#">Get In Touch</a>
             </li>
           </ul>
         </div>

@@ -1,43 +1,260 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
-
+import Portfolio from "../components/Portfolio";
+import Contact from "../components/Contact";
+import Dropdown from "../components/Dropdown";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitterSquare,
+} from "react-icons/fa";
 const Page = () => {
   return (
     <div>
       {/* navbar */}
+      <div className="md:px-10">
       <Navbar />
+
+      </div>
       {/* navbar */}
 
       {/* hero section  */}
-      <div className="p-5 flex flex-col gap-10 ">
-        <div className="w-20 h-1 bg-black "></div>
+      <div className="p-5 flex flex-col gap-10 md:p-10 lg:p-40 lg:flex-row ">
+        <div className="w-20 h-1 bg-herotext  md:w-48 md:h-2 lg:w-40"></div>
         <div className="">
-          <h1 className="text-4xl font-bold pb-3 text-herotext">
-            Where <br /> Design Meets Innovation!
+          <h1 className="text-4xl font-bold pb-3 text-herotext md:text-8xl tracking-wide lg:text-7xl">
+            Where <br /> Design Meets <br /> Innovation!
           </h1>
-          <p className="text-herotext opacity-[70%] mb-10">
+          <p className="text-herotext opacity-[70%] mb-10 md:text-4xl md:py-5 lg:text-3xl">
             Whether you're a startup looking to establish your brand identity or
             an established business aiming to refresh your image, we've got the
             creative firepower to make it happen.
           </p>
           <div>
-            <button className="font-semibold bg-herotext w-32  p-3 rounded-xl text-white ">
+            <button className="font-semibold bg-herotext w-auto  p-3 rounded-xl text-white md:text-5xl md:p-8 md:rounded-2xl lg:text-3xl lg:w-[20rem]">
               Let's Talk
             </button>
           </div>
         </div>
         <div className=" ">
-          <img src="/image/heroimg.png" alt="" />
+          <img src="/image/heroimg.png" alt="" className="lg:w-[170rem]" />
         </div>
       </div>
       {/* hero section  */}
 
       {/* services */}
-      
+      <div className="bg-black h-auto text-white p-5 py-10 flex flex-col md:p-10 lg:p-40 lg:flex-row lg:gap-5">
+        <div className="lg:text-xl py-5 flex gap-2">
+          <span>Our</span>
+          <span>Services</span>
+        </div>
+        <div className="lg:w-full">
+          <div>
+            <Dropdown
+              header={<div className=" text-white ">Visual Branding</div>}
+              content={
+                <p>
+                  Your brand is more than just a logo; it's the essence of your
+                  business. We create compelling brand identities that tell your
+                  unique story and resonate with your target audience.
+                </p>
+              }
+            />
+            <Dropdown
+              header={<div className=" text-white ">Creative Campaign</div>}
+              content={
+                <p>
+                  Unleash the power of creativity with our innovative and
+                  impactful campaigns that captivate your audience. From
+                  eye-catching visuals to compelling storytelling, we craft
+                  campaigns that leave a lasting impression.
+                </p>
+              }
+            />
+            <Dropdown
+              header={<div className=" text-white ">UI/UX Design</div>}
+              content={
+                <p>
+                  Elevate user experiences with our cutting-edge UI/UX design
+                  services. We believe that a seamless and visually pleasing
+                  interface is key to user engagement. Our design experts
+                  meticulously craft every detail, from intuitive user
+                  interfaces to delightful user experiences.
+                </p>
+              }
+            />
+            <Dropdown
+              header={<div className=" text-white ">Development</div>}
+              content={
+                <p>
+                  Transform your ideas into reality with our expert development
+                  services. Our team of skilled developers is committed to
+                  building robust and scalable solutions tailored to your unique
+                  needs.
+                </p>
+              }
+            />
+          </div>
+        </div>
+      </div>
       {/* services */}
 
+      {/* portfolio */}
+      <div className="p-5 flex flex-col py-20 gap-2 md:p-10 lg:p-40 lg:flex-row lg:gap-5 ">
+        <div className="font-medium flex gap-2 cursor-all-scroll md:text-4xl lg:w-1/4">
+          <span>Our</span>
+          <span>Portflio</span>
+        </div>
+        <div>
+          <h1 className=" text-xl py-2 md:text-5xl lg:text-4xl">
+            We envision a world where every idea, product, or service is brought
+            to life through exceptional design.
+          </h1>
+
+          <div className="grid gap-10 md:gap-20 md:grid-cols-1 lg:grid-cols-2 md:pt-10 " >
+            <Portfolio
+              imageUrl="/image/portfolio1.png"
+              title="Daily App -"
+              description="Increasing your productivity"
+            />
+            <Portfolio
+              imageUrl="/image/portfolio2.png"
+              title="Daily App -"
+              description="Increasing your productivity"
+            />
+            <Portfolio
+              imageUrl="/image/portfoli3.png"
+              title="Daily App -"
+              description="Increasing your productivity"
+            />
+            <Portfolio
+              imageUrl="/image/portfolio4.png"
+              title="Daily App -"
+              description="Increasing your productivity"
+            />
+            <Portfolio
+              imageUrl="/image/portfolio6.png"
+              title="Daily App -"
+              description="Increasing your productivity"
+            />
+            <Portfolio
+              imageUrl="/image/portfolio7.png"
+              title="Daily App -"
+              description="Increasing your productivity"
+            />
+          </div>
+        </div>
+      </div>
+      {/* portfolio */}
       <div></div>
+      {/* contact */}
+      <div className="bg-black text-white p-5 flex flex-col gap-5 md:p-10 lg:p-40 lg:flex-row">
+        <div className=" md:text-4xl py-4 flex  gap-1 lg:text-2xl lg:w-1/4 ">
+          <span>Let's</span>
+          <span>Collaborate</span>
+        </div>
+        <div>
+          <p className="py-5 text-xl md:text-5xl lg:text-2xl lg:w-3/4">
+            Ready to turn your ideas into exceptional designs? Contact us today,
+            and let's make something amazing together!
+          </p>
+          <Contact />
+        </div>
+      </div>
+      {/* contact */}
+      {/* footer */}
+      <div className="bg-black text-white p-5 md:p-10 lg:p-40">
+        <div className="">
+          <div className="md:text-3xl ">
+            <h2 className="font-medium pb-5 md:text-5xl">Sky Tech</h2>
+            <p className="text-white opacity-[70%] text-sm py-3 md:text-3xl  lg:text-2xl">
+              SkyTech is where your imagination and our expertise converge to
+              create design solutions that elevate your brand and set you apart
+              from the competition.
+            </p>
+            <p className="py-2 lg:text-2xl">
+              <a href="mailto:companymail">info@sktech.com</a>
+            </p>
+            <p className="lg:text-2xl">+ 233-243-500-3456</p>
+          </div>
+          <div className="flex  justify-between items-center md:text-3xl lg:text-xl ">
+            <div className="py-5 ">
+              <h1 className="text-xl md:text-3xl lg:text-2xl">Company</h1>
+              <div className="opacity-[70%] ">
+                <ul className="leading-loose">
+                  <li>
+                    <a href="#">About</a>
+                  </li>
+                  <li>
+                    <a href="#">Services</a>
+                  </li>
+                  <li>
+                    <a href="#">Careers</a>
+                  </li>
+                  <li>
+                    <a href="#">Blog</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <h1 className="text-xl md:text-3xl lg:text-2xl">Contact</h1>
+              <div className="opacity-[70%] ">
+                <ul className="leading-loose">
+                  <li>
+                    <a href="#">Help</a>
+                  </li>
+                  <li>
+                    <a href="#">FAQs</a>
+                  </li>
+                  <li>
+                    <a href="#">Careers</a>
+                  </li>
+                  <li>
+                    <a href="#">Terms & Conditions</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className="md:text-3xl">
+              <h1>Discover</h1>
+              <div className="opacity-[70%] ">
+                <ul className="leading-loose">
+                  <li>
+                    <a href="#">Affiliate</a>
+                  </li>
+                  <li>
+                    <a href="#">Partner Program</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div className="md:text-3xl pt-10">
+            <p className="text-center">
+              Copyright © 2032 Creativo®. All rights reserved.
+            </p>
+          </div>
+          <div className="text-3xl flex justify-center items-center gap-5">
+            <div>
+              <FaLinkedin className="text-4xl  md:text-7xl my-2" />
+            </div>
+            <div>
+              <FaInstagram className="text-4xl md:text-7xl my-2" />
+            </div>
+            <div>
+              <FaFacebook className="text-4xl md:text-7xl my-2" />
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* footer */}
     </div>
   );
 };
