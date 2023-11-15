@@ -26,7 +26,7 @@ const Dropdown: React.FC<DropdownProps> = ({ header, content }) => {
         <FaChevronDown />
       </div>
       {isOpen && (
-        <div className="mt-5 text-white  shadow-md rounded-md p-4 opacity-[80%] md:text-4xl lg:text-3xl ">
+        <div className="mt-5 text-white  shadow-md rounded-md p-4 opacity-[80%] md:text-4xl lg:text-2xl ">
           {content}
         </div>
       )}

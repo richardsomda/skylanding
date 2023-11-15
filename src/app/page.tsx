@@ -3,7 +3,6 @@ import Navbar from "../components/Navbar";
 import Portfolio from "../components/Portfolio";
 import Contact from "../components/Contact";
 import Dropdown from "../components/Dropdown";
-import { motion, AnimatePresence } from "framer-motion";
 import {
   FaFacebook,
   FaInstagram,
@@ -11,36 +10,29 @@ import {
   FaTwitterSquare,
 } from "react-icons/fa";
 const Page = () => {
-  
   return (
     <div>
       {/* navbar */}
       <div className="md:px-10">
-      <Navbar />
-
+        <Navbar />
       </div>
       {/* navbar */}
 
       {/* hero section  */}
-      <motion.div
-      initial={{ opacity: 0, height: 0 }}
-      animate={{ opacity: 1, height: "auto" }}
-      exit={{ opacity: 0, height: 0 }}
-      transition={{ duration: 0.7 }}
-
-      className="p-5 flex flex-col gap-10 md:p-10 lg:p-40 lg:flex-row ">
+      <div className="p-5 flex flex-col gap-10 md:p-10 lg:p-40 lg:flex-row ">
         <div className="w-20 h-1 bg-herotext  md:w-48 md:h-2 lg:w-40"></div>
         <div className="">
-          <h1 className="text-4xl font-bold pb-3 text-herotext md:text-8xl tracking-wide lg:text-7xl">
+          <h1 className="text-4xl font-bold pb-3 text-herotext md:text-8xl tracking-wide lg:text-6xl">
             Where <br /> Design Meets <br /> Innovation!
           </h1>
-          <p className="text-herotext opacity-[70%] mb-10 md:text-4xl md:py-5 lg:text-3xl">
+          <p className="text-herotext opacity-[70%] mb-10 md:text-4xl md:py-5 lg:text-2xl">
             Whether you're a startup looking to establish your brand identity or
             an established business aiming to refresh your image, we've got the
             creative firepower to make it happen.
           </p>
           <div>
-            <button className="font-semibold bg-herotext w-auto  p-3 rounded-xl text-white md:text-5xl md:p-8 md:rounded-2xl lg:text-3xl lg:w-[20rem]">
+            <button className="font-semibold bg-herotext w-auto   p-3 rounded-xl text-white md:text-5xl 
+            md:p-8 md:rounded-2xl lg:p-5 lg:text-2xl lg:w-[10rem]">
               Let's Talk
             </button>
           </div>
@@ -48,23 +40,17 @@ const Page = () => {
         <div className=" ">
           <img src="/image/heroimg.png" alt="" className="lg:w-[170rem]" />
         </div>
-      </motion.div>
+      </div>
       {/* hero section  */}
 
       {/* services */}
-      <motion.div 
-      initial={{ opacity: 0, height: 0 }}
-      animate={{ opacity: 1, height: 'auto' }}
-      exit={{ opacity: 0, height: 0 }}
-      transition={{ duration: 0.3 }}
-
-      className="bg-black h-auto text-white p-5 py-10 flex flex-col md:p-10 lg:p-40 lg:flex-row lg:gap-5">
-        <div className="lg:text-xl py-5 flex gap-2">
+      <div className="bg-black h-auto text-white p-5 py-10 flex flex-col md:p-10 lg:p-40 lg:flex-row lg:gap-5">
+        <div className="md:text-2xl lg:text-xl py-5 flex gap-2">
           <span>Our</span>
           <span>Services</span>
         </div>
         <div className="lg:w-full">
-          <div>
+          <div className="flex flex-col gap-5">
             <Dropdown
               header={<div className=" text-white ">Visual Branding</div>}
               content={
@@ -111,22 +97,22 @@ const Page = () => {
             />
           </div>
         </div>
-      </motion.div>
+      </div>
       {/* services */}
 
       {/* portfolio */}
-      <div className="p-5 flex flex-col py-20 gap-2 md:p-10 lg:p-40 lg:flex-row lg:gap-5 ">
-        <div className="font-medium flex gap-2 cursor-all-scroll md:text-4xl lg:w-1/4">
+      <div className="p-5 flex flex-col py-20 gap-2 md:p-10 lg:p-40 lg:flex-row  ">
+        <div className="font-medium flex gap-2 cursor-all-scroll md:text-4xl lg:w-1/4 lg:text-xl">
           <span>Our</span>
           <span>Portflio</span>
         </div>
         <div>
-          <h1 className=" text-xl py-2 md:text-5xl lg:text-4xl">
+          <h1 className=" text-xl py-2 md:text-5xl lg:text-2xl">
             We envision a world where every idea, product, or service is brought
             to life through exceptional design.
           </h1>
 
-          <div className="grid gap-10 md:gap-20 md:grid-cols-1 lg:grid-cols-2 md:pt-10 " >
+          <div className="grid gap-10 md:gap-20 md:grid-cols-1 lg:grid-cols-2 md:pt-10 ">
             <Portfolio
               imageUrl="/image/portfolio1.png"
               title="Daily App -"
@@ -164,12 +150,12 @@ const Page = () => {
 
       {/* contact */}
       <div className="bg-black text-white p-5 flex flex-col gap-5 md:p-10 lg:p-40 lg:flex-row">
-        <div className=" md:text-4xl py-4 flex  gap-1 lg:text-2xl lg:w-1/4 ">
+        <div className=" md:text-4xl pt-4 flex  gap-1 lg:text-xl lg:w-1/4 ">
           <span>Let's</span>
           <span>Collaborate</span>
         </div>
         <div>
-          <p className="py-5 text-xl md:text-5xl lg:text-2xl lg:w-3/4">
+          <p className="pb-3 text-md md:text-5xl lg:text-2xl lg:w-3/4 ">
             Ready to turn your ideas into exceptional designs? Contact us today,
             and let's make something amazing together!
           </p>
@@ -178,23 +164,23 @@ const Page = () => {
       </div>
       {/* contact */}
       {/* footer */}
-      <div className="bg-black text-white p-5 md:p-10 lg:p-40">
-        <div className="">
-          <div className="md:text-3xl ">
-            <h2 className="font-medium pb-5 md:text-5xl">Sky Tech</h2>
-            <p className="text-white opacity-[70%] text-sm py-3 md:text-3xl  lg:text-2xl">
+      <div className="bg-black text-white p-5 md:p-10 lg:px-40 ">
+        <div className="lg:flex justify-between items-center lg:gap-20">
+          <div className="md:text-3xl lg:w-1/3 ">
+            <h2 className="font-medium pb-5 md:text-5xl lg:text-2xl ">Sky Tech</h2>
+            <p className="text-white  text-md  opacity-[60%] text-sm py-3 md:text-3xl  lg:text-xl">
               SkyTech is where your imagination and our expertise converge to
               create design solutions that elevate your brand and set you apart
               from the competition.
             </p>
-            <p className="py-2 lg:text-2xl">
+            <p className="py-1 lg:text-xl">
               <a href="mailto:companymail">info@sktech.com</a>
             </p>
-            <p className="lg:text-2xl">+ 233-243-500-3456</p>
+            <p className="lg:text-xl">+ 233-243-500-3456</p>
           </div>
-          <div className="flex  justify-between items-center md:text-3xl lg:text-xl ">
+          <div className="flex  justify-evenly  items-center md:text-3xl lg:text-xl lg:w-1/3">
             <div className="py-5 ">
-              <h1 className="text-xl md:text-3xl lg:text-2xl">Company</h1>
+              <h1 className="text-xl md:text-3xl lg:text-xl">Company</h1>
               <div className="opacity-[70%] ">
                 <ul className="leading-loose">
                   <li>
@@ -213,7 +199,7 @@ const Page = () => {
               </div>
             </div>
             <div>
-              <h1 className="text-xl md:text-3xl lg:text-2xl">Contact</h1>
+              <h1 className="text-xl md:text-3xl lg:text-xl">Contact</h1>
               <div className="opacity-[70%] ">
                 <ul className="leading-loose">
                   <li>
@@ -232,8 +218,8 @@ const Page = () => {
               </div>
             </div>
           </div>
-          <div>
-            <div className="md:text-3xl">
+          <div className="lg:w-1/3">
+            <div className="md:text-3xl lg:text-xl">
               <h1>Discover</h1>
               <div className="opacity-[70%] ">
                 <ul className="leading-loose">
@@ -249,21 +235,21 @@ const Page = () => {
           </div>
         </div>
 
-        <div>
+        <div className="">
           <div className="md:text-3xl pt-10">
-            <p className="text-center text-[10px]">
+            <p className="text-center text-[10px] lg:text-xl">
               Copyright © 2023 SkyTech. All rights reserved.
             </p>
           </div>
           <div className=" flex justify-center items-center gap-5">
             <div>
-              <FaLinkedin className="text-2xl  md:text-7xl my-2" />
+              <FaLinkedin className="text-2xl  md:text-7xl my-2 lg:text-4xl" />
             </div>
             <div>
-              <FaInstagram className="text-2xl md:text-7xl my-2" />
+              <FaInstagram className="text-2xl md:text-7xl my-2 lg:text-4xl" />
             </div>
             <div>
-              <FaFacebook className="text-2xl md:text-7xl my-2" />
+              <FaFacebook className="text-2xl md:text-7xl my-2  lg:text-4xl" />
             </div>
           </div>
         </div>
