@@ -10,18 +10,18 @@ const Navbar = () => {
   };
 
   return (
-    <div className="relative lg:mx-40">
+    <div className="relative lg:mx-40 ">
       <div className="flex justify-between px-5 py-5">
-        <div className="text-2xl font-bold md:text-5xl lg:text-3xl ">
+        <div className="text-2xl font-bold md:text-3xl lg:text-3xl ">
           <h1>Skytech</h1>
         </div>
         <div
-          className="text-2xl font-bold md:hidden text-herotext"
+          className="text-2xl md:text-xl font-bold md:hidden text-herotext"
           onClick={toggleDropdown}
         >
           <FaBars />
         </div>
-        <nav className="hidden md:flex items-center space-x-8 gap-5 text-2xl lg:text-xl">
+        <nav className="hidden md:flex items-center space-x-8 gap-5 text-2xl md:text-lg lg:text-xl">
           <a href="#" className="">
             Home
           </a>

@@ -163,10 +163,12 @@ const Page = () => {
         </div>
       </div>
       {/* contact */}
+
+
       {/* footer */}
       <div className="bg-black text-white p-5 md:p-10 lg:px-40 ">
-        <div className="lg:flex justify-between items-center lg:gap-20">
-          <div className="md:text-3xl lg:w-1/3 ">
+        <div className="lg:flex justify-around items-center lg:gap-20">
+          <div className="md:text-3xl lg:1/3 ">
             <h2 className="font-medium pb-5 md:text-5xl lg:text-2xl ">Sky Tech</h2>
             <p className="text-white  text-md  opacity-[60%] text-sm py-3 md:text-3xl  lg:text-xl">
               SkyTech is where your imagination and our expertise converge to
@@ -178,11 +180,11 @@ const Page = () => {
             </p>
             <p className="lg:text-xl">+ 233-243-500-3456</p>
           </div>
-          <div className="flex  justify-evenly  items-center md:text-3xl lg:text-xl lg:w-1/3">
-            <div className="py-5 ">
-              <h1 className="text-xl md:text-3xl lg:text-xl">Company</h1>
+          <div className="flex gap-10 justify-between  items-center md:text-3xl lg:text-xl lg:w-2/3 ">
+            <div className="py-5 md:py-2 ">
+              <h1 className="text-sm md:text-3xl lg:text-xl">Company</h1>
               <div className="opacity-[70%] ">
-                <ul className="leading-loose">
+                <ul className="leading-loose text-sm md:text-2xl lg:text-xl">
                   <li>
                     <a href="#">About</a>
                   </li>
@@ -198,10 +200,10 @@ const Page = () => {
                 </ul>
               </div>
             </div>
-            <div>
+            <div className="py-5 md:py-2">
               <h1 className="text-xl md:text-3xl lg:text-xl">Contact</h1>
               <div className="opacity-[70%] ">
-                <ul className="leading-loose">
+                <ul className="leading-loose text-sm md:text-2xl lg:text-xl">
                   <li>
                     <a href="#">Help</a>
                   </li>
@@ -218,7 +220,7 @@ const Page = () => {
               </div>
             </div>
           </div>
-          <div className="lg:w-1/3">
+          <div className="lg:w-1/3 flex jc lg:justify-end">
             <div className="md:text-3xl lg:text-xl">
               <h1>Discover</h1>
               <div className="opacity-[70%] ">
@@ -235,22 +237,22 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="">
-          <div className="md:text-3xl pt-10">
-            <p className="text-center text-[10px] lg:text-xl">
+        <div className="pt-20 lg:flex gap-10 justify-center items-center ">
+          <div className="flex gap-5 justify-center lg:flex  text-xl  lg:text-3xl">
+            <div>
+              <FaLinkedin className="" />
+            </div>
+            <div>
+              <FaInstagram className="" />
+            </div>
+            <div>
+              <FaFacebook className="" />
+            </div>
+          </div>
+          <div className="">
+            <p className="text-sm text-center p-1 lg:text-2xl">
               Copyright © 2023 SkyTech. All rights reserved.
             </p>
-          </div>
-          <div className=" flex justify-center items-center gap-5">
-            <div>
-              <FaLinkedin className="text-2xl  md:text-7xl my-2 lg:text-4xl" />
-            </div>
-            <div>
-              <FaInstagram className="text-2xl md:text-7xl my-2 lg:text-4xl" />
-            </div>
-            <div>
-              <FaFacebook className="text-2xl md:text-7xl my-2  lg:text-4xl" />
-            </div>
           </div>
         </div>
       </div>
