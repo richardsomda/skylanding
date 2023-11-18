@@ -35,26 +35,37 @@ const ContactForm: React.FC = () => {
       <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
         Name:
         <input
-          className="w-full px-3 py-2 border rounded-md mt-1 focus:outline-none focus:ring focus:border-blue-300"
+          className="w-full px-3 py-2 border rounded-md mt-1 focus:outline-none focus:ring focus:border-herotext"
           type="text"
           name="name"
           id="name"
           value={formData.name}
           onChange={handleChange}
-          placeholder="John Doe"
+          placeholder="name"
         />
       </label>
 
       <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
         Email:
         <input
-          className="w-full px-3 py-2 border rounded-md mt-1 focus:outline-none focus:ring focus:border-blue-300"
+          className="w-full px-3 py-2 border rounded-md mt-1 focus:outline-none focus:ring focus:border-herotext"
           type="email"
           name="email"
           id="email"
           value={formData.email}
           onChange={handleChange}
-          placeholder="john.doe@example.com"
+          placeholder=" skytech@gmail.com"
+        />
+      </label>
+      <label className="block text-gray-700 text-sm font-bold mb-2" >
+        Message:
+        <textarea 
+          className="w-full px-3 py-2 border rounded-md mt-1 focus:outline-none focus:ring focus:border-herotext"
+          name="message"
+          id="message"
+          rows={5}
+          onChange={handleChange}
+          placeholder="Enter Message"
         />
       </label>
 
