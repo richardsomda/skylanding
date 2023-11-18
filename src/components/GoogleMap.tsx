@@ -1,47 +1,53 @@
-// pages/street-view.tsx
-import { useEffect } from 'react';
+// GoogleMap.tsx
 
-const StreetView = () => {
+import React, { useEffect } from 'react';
+
+// Add your Google Maps API key here
+const googleMapsApiKey = 'AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg';
+
+interface MyLatlng {
+  lat:  -25.363;
+  lng: 131.04;
+}
+
+const GoogleMap: React.FC = () => {
   useEffect(() => {
-    const initialize = () => {
-      const fenway = { lat: 42.345573, lng: -71.098326 };
-      const map = new google.maps.Map(document.getElementById("map"), {
-        center: fenway,
-        zoom: 14,
+    const initMap = () => {
+      const myLatlng: MyLatlng = { lat: -25.363, lng: 131.044 };
+      const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 4,
+        center: myLatlng,
       });
-      const panorama = new google.maps.StreetViewPanorama(
-        document.getElementById("pano"),
-        {
-          position: fenway,
-          pov: {
-            heading: 34,
-            pitch: 10,
-          },
-        }
-      );
 
-      map.setStreetView(panorama);
+      const marker = new google.maps.Marker({
+        position: myLatlng,
+        map,
+        title: 'Click to zoom',
+      });
+
+      map.addListener('center_changed', () => {
+        window.setTimeout(() => {
+          map.panTo(marker.getPosition());
+        }, 3000);
+      });
+
+      marker.addListener('click', () => {
+        map.setZoom(8);
+        map.setCenter(marker.getPosition());
+      });
     };
 
-    window.initialize = initialize;
-    initialize(); // Call initialize on component mount
+    const script = document.createElement('script');
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${googleMapsApiKey}&callback=initMap&v=weekly`;
+    script.defer = true;
+    document.head.appendChild(script);
 
-    // Clean up the global initialize function when the component is unmounted
     return () => {
-      window.initialize = undefined;
+      document.head.removeChild(script);
     };
   }, []);
 
-  return (
-    <div>
-      <div id="map" style={{ float: 'left', height: '100%', width: '50%' }}></div>
-      <div id="pano" style={{ float: 'left', height: '100%', width: '50%' }}></div>
-      <script
-        src={`https://maps.googleapis.com/maps/api/js?key=<API_KEY>&callback=initialize&v=weekly`}
-        defer
-      ></script>
-    </div>
-  );
+  return <div id="map" style={{ height: '100vh' }} />;
 };
 
-export default StreetView;
+export default GoogleMap;
