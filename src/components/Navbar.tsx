@@ -22,13 +22,13 @@ const Navbar = () => {
           <FaBars />
         </div>
         <nav className="hidden md:flex items-center space-x-8 gap-5 text-2xl md:text-lg lg:text-xl">
-          <a href="#" className="">
+          <a href="#home" className="">
             Home
           </a>
-          <a href="#" className="">
+          <a href="#about" className="">
             About
           </a>
-          <a href="#" className="">
+          <a href="#portfolio" className="">
             Portfolio
           </a>
           <div>
@@ -40,17 +40,17 @@ const Navbar = () => {
         <div className="absolute top-15 right-0 bg-herotext border border-gray-300 shadow-md rounded-md p-5 w-full">
           <ul className="text-white">
             <li className="p-1">
-              <a href="#">Home</a>
+              <a href="#home">Home</a>
             </li>
 
             <li className="p-1">
-              <a href="#">About Us</a>
+              <a href="#about">About Us</a>
             </li>
             <li className="p-1">
-              <a href="#">Blog</a>
+              <a href="#blog">Blog</a>
             </li>
             <li className="p-1">
-              <a href="#">Get In Touch</a>
+              <a href="#contact">Get In Touch</a>
             </li>
           </ul>
         </div>

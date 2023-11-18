@@ -19,7 +19,7 @@ const Page = () => {
       {/* navbar */}
 
       {/* hero section  */}
-      <div className="p-5 flex flex-col gap-10 md:p-10 lg:p-40 lg:flex-row ">
+      <div className="p-5 flex flex-col gap-10 md:p-10 lg:p-40 lg:flex-row " id="home">
         <div className="w-20 h-1 bg-herotext  md:w-48 md:h-2 lg:w-40"></div>
         <div className="">
           <h1 className="text-4xl font-bold pb-3 text-herotext md:text-8xl tracking-wide lg:text-6xl">
@@ -44,7 +44,7 @@ const Page = () => {
       {/* hero section  */}
 
       {/* services */}
-      <div className="bg-black h-auto text-white p-5 py-10 flex flex-col md:p-10 lg:p-40 lg:flex-row lg:gap-5">
+      <div className="bg-black h-auto text-white p-5 py-10 flex flex-col md:p-10 lg:p-40 lg:flex-row lg:gap-5" id="servies">
         <div className="md:text-2xl lg:text-xl py-5 flex gap-2">
           <span>Our</span>
           <span>Services</span>
@@ -101,7 +101,7 @@ const Page = () => {
       {/* services */}
 
       {/* portfolio */}
-      <div className="p-5 flex flex-col py-20 gap-2 md:p-10 lg:p-40 lg:flex-row  ">
+      <div className="p-5 flex flex-col py-20 gap-2 md:p-10 lg:p-40 lg:flex-row  " id="portfolio"> 
         <div className="font-medium flex gap-2 cursor-all-scroll md:text-4xl lg:w-1/4 lg:text-xl">
           <span>Our</span>
           <span>Portflio</span>
@@ -149,7 +149,7 @@ const Page = () => {
       {/* portfolio */}
 
       {/* contact */}
-      <div className="bg-black text-white p-5 flex flex-col gap-5 md:p-10 lg:p-40 lg:flex-row">
+      <div className="bg-black text-white p-5 flex flex-col gap-5 md:p-10 lg:p-40 lg:flex-row" id="contact">
         <div className=" md:text-4xl pt-4 flex  gap-1 lg:text-xl lg:w-1/4 ">
           <span>Let's</span>
           <span>Collaborate</span>
