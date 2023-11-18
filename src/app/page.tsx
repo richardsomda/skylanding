@@ -3,7 +3,8 @@ import Navbar from "../components/Navbar";
 import Portfolio from "../components/Portfolio";
 import Contact from "../components/Contact";
 import Dropdown from "../components/Dropdown";
-import { motion } from "framer-motion";
+import ContactForm from "../components/ContactForm"
+// import { motion } from "framer-motion";
 import {
   FaFacebook,
   FaInstagram,
@@ -11,6 +12,7 @@ import {
   FaTwitterSquare,
 } from "react-icons/fa";
 const Page = () => {
+  
   return (
     <div>
       {/* navbar */}
@@ -45,7 +47,7 @@ const Page = () => {
       {/* hero section  */}
 
       {/* services */}
-      <div className="bg-black h-auto text-white p-5 py-10 flex flex-col md:p-20 lg:p-40 lg:flex-row lg:gap-5" id="servies">
+      <div className="bg-black h-auto text-white p-5 py-10 flex flex-col md:p-20 lg:p-40 lg:flex-row lg:gap-5" id="services">
         <div className="md:text-2xl lg:text-xl py-5 flex gap-2">
           <span>Our</span>
           <span>Services</span>
@@ -165,6 +167,8 @@ const Page = () => {
       </div>
       {/* contact */}
 
+
+<ContactForm/>
 
       {/* footer */}
       <div className="bg-black text-white p-5 md:p-20 lg:px-40 ">

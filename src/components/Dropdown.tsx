@@ -23,13 +23,21 @@ const Dropdown: React.FC<DropdownProps> = ({ header, content }) => {
        border-white border-opacity-[50%] md:text-3xl  lg:text-4xl "
       >
         {header}
-        <FaChevronDown />
+        {isOpen ? <FaChevronUp /> : <FaChevronDown />}
       </div>
-      {isOpen && (
-        <div className="mt-5 text-white  shadow-md rounded-md p-4 opacity-[80%] md:text-2xl lg:text-2xl ">
-          {content}
-        </div>
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="mt-5 text-white  shadow-md rounded-md p-4 opacity-[80%] md:text-2xl lg:text-2xl "
+          >
+            {content}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
+import Link from 'next/link'; 
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -44,13 +45,13 @@ const Navbar = () => {
             </li>
 
             <li className="p-1">
-              <a href="#about">About Us</a>
+              <a href="#services">Services</a>
             </li>
             <li className="p-1">
               <a href="#blog">Blog</a>
             </li>
             <li className="p-1">
-              <a href="#contact">Get In Touch</a>
+              <a href="#">Get In Touch</a>
             </li>
           </ul>
         </div>
