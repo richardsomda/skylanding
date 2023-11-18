@@ -191,10 +191,10 @@ const Page = () => {
               <div className="opacity-[70%] ">
                 <ul className="leading-loose text-sm md:text-xl lg:text-xl">
                   <li>
-                    <a href="#">About</a>
+                    <a href="#about">About</a>
                   </li>
                   <li>
-                    <a href="#">Services</a>
+                    <a href="#services">Services</a>
                   </li>
                   <li>
                     <a href="#">Careers</a>
@@ -245,13 +245,13 @@ const Page = () => {
         <div className="pt-20 lg:flex gap-10 justify-center items-center ">
           <div className="flex gap-5 justify-center lg:flex  text-xl  lg:text-3xl">
             <div>
-              <FaLinkedin className="" />
+              <FaLinkedin className="https://linkedin.com" />
             </div>
             <div>
-              <FaInstagram className="" />
+              <FaInstagram className="https://instagram.com" />
             </div>
             <div>
-              <FaFacebook className="" />
+              <FaFacebook className="https://facebook.com" />
             </div>
           </div>
           <div className="">
