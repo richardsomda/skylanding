@@ -10,10 +10,11 @@ const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    message : '',
   });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, message} = e.target;
     setFormData({
       ...formData,
       [name]: value,

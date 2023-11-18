@@ -14,7 +14,7 @@ import {
 const Page = () => {
   
   return (
-    <div>
+    <div className ="font-sans">
       {/* navbar */}
       <div className="md:px-10">
         <Navbar />

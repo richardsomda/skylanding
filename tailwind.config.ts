@@ -17,6 +17,9 @@ const config: Config = {
         herotext: '#1F1F39',    
         text: '#F5F5F5',       
       },
+      fontFamily: {
+        'sans': ['Poppins', 'sans-serif'],
+      },
     },
   },
   plugins: [],
