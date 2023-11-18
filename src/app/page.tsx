@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Portfolio from "../components/Portfolio";
 import Contact from "../components/Contact";
 import Dropdown from "../components/Dropdown";
+import { motion } from "framer-motion";
 import {
   FaFacebook,
   FaInstagram,
@@ -19,20 +20,20 @@ const Page = () => {
       {/* navbar */}
 
       {/* hero section  */}
-      <div className="p-5 flex flex-col gap-10 md:p-10 lg:p-40 lg:flex-row " id="home">
-        <div className="w-20 h-1 bg-herotext  md:w-48 md:h-2 lg:w-40"></div>
+      <div className="p-5 flex flex-col gap-10 md:p-20 lg:p-40 lg:flex-row " id="home">
+        <div className="w-20 h-1 bg-herotext  md:w-40 md:h-2 lg:w-40"></div>
         <div className="">
-          <h1 className="text-4xl font-bold pb-3 text-herotext md:text-8xl tracking-wide lg:text-6xl">
+          <h1 className="text-4xl font-bold pb-3 text-herotext md:text-7xl tracking-wide lg:text-6xl">
             Where <br /> Design Meets <br /> Innovation!
           </h1>
-          <p className="text-herotext opacity-[70%] mb-10 md:text-4xl md:py-5 lg:text-2xl">
+          <p className="text-herotext opacity-[70%] mb-10 md:text-3xl md:py-5 lg:text-2xl">
             Whether you're a startup looking to establish your brand identity or
             an established business aiming to refresh your image, we've got the
             creative firepower to make it happen.
           </p>
           <div>
-            <button className="font-semibold bg-herotext w-auto   p-3 rounded-xl text-white md:text-5xl 
-            md:p-8 md:rounded-2xl lg:p-5 lg:text-2xl lg:w-[10rem]">
+            <button className="font-semibold bg-herotext w-auto   p-3 rounded-xl text-white md:text-3xl 
+            md:p-5 md:rounded-2xl lg:p-5 lg:text-2xl lg:w-[10rem]">
               Let's Talk
             </button>
           </div>
@@ -44,7 +45,7 @@ const Page = () => {
       {/* hero section  */}
 
       {/* services */}
-      <div className="bg-black h-auto text-white p-5 py-10 flex flex-col md:p-10 lg:p-40 lg:flex-row lg:gap-5" id="servies">
+      <div className="bg-black h-auto text-white p-5 py-10 flex flex-col md:p-20 lg:p-40 lg:flex-row lg:gap-5" id="servies">
         <div className="md:text-2xl lg:text-xl py-5 flex gap-2">
           <span>Our</span>
           <span>Services</span>
@@ -101,13 +102,13 @@ const Page = () => {
       {/* services */}
 
       {/* portfolio */}
-      <div className="p-5 flex flex-col py-20 gap-2 md:p-10 lg:p-40 lg:flex-row  " id="portfolio"> 
-        <div className="font-medium flex gap-2 cursor-all-scroll md:text-4xl lg:w-1/4 lg:text-xl">
+      <div className="p-5 flex flex-col py-20 gap-2 md:p-20 lg:p-40 lg:flex-row  " id="portfolio"> 
+        <div className="font-medium flex gap-2 cursor-all-scroll md:text-2xl lg:w-1/4 lg:text-xl">
           <span>Our</span>
           <span>Portflio</span>
         </div>
         <div>
-          <h1 className=" text-xl py-2 md:text-5xl lg:text-2xl">
+          <h1 className=" text-xl py-2 md:text-2xl lg:text-2xl">
             We envision a world where every idea, product, or service is brought
             to life through exceptional design.
           </h1>
@@ -149,13 +150,13 @@ const Page = () => {
       {/* portfolio */}
 
       {/* contact */}
-      <div className="bg-black text-white p-5 flex flex-col gap-5 md:p-10 lg:p-40 lg:flex-row" id="contact">
-        <div className=" md:text-4xl pt-4 flex  gap-1 lg:text-xl lg:w-1/4 ">
+      <div className="bg-black text-white p-5 flex flex-col gap-5 md:p-20 lg:p-40 lg:flex-row" id="contact">
+        <div className=" md:text-2xl pt-4 flex  gap-1 lg:text-xl lg:w-1/4 ">
           <span>Let's</span>
           <span>Collaborate</span>
         </div>
         <div>
-          <p className="pb-3 text-md md:text-5xl lg:text-2xl lg:w-3/4 ">
+          <p className="pb-3 text-md md:text-2xl lg:text-2xl lg:w-3/4 ">
             Ready to turn your ideas into exceptional designs? Contact us today,
             and let's make something amazing together!
           </p>
@@ -166,25 +167,25 @@ const Page = () => {
 
 
       {/* footer */}
-      <div className="bg-black text-white p-5 md:p-10 lg:px-40 ">
+      <div className="bg-black text-white p-5 md:p-20 lg:px-40 ">
         <div className="lg:flex justify-around items-center lg:gap-20">
           <div className="md:text-3xl lg:1/3 ">
-            <h2 className="font-medium pb-5 md:text-5xl lg:text-2xl ">Sky Tech</h2>
-            <p className="text-white  text-md  opacity-[60%] text-sm py-3 md:text-3xl  lg:text-xl">
+            <h2 className="font-medium pb-5 md:text-2xl lg:text-2xl ">Sky Tech</h2>
+            <p className="text-white  text-md  opacity-[60%] text-sm py-3 md:text-2xl  lg:text-xl">
               SkyTech is where your imagination and our expertise converge to
               create design solutions that elevate your brand and set you apart
               from the competition.
             </p>
-            <p className="py-1 lg:text-xl">
+            <p className="py-1 md:text-xl lg:text-xl">
               <a href="mailto:companymail">info@sktech.com</a>
             </p>
-            <p className="lg:text-xl">+ 233-243-500-3456</p>
+            <p className="md:text-xl lg:text-xl">+ 233-243-500-3456</p>
           </div>
           <div className="flex gap-10 justify-between  items-center md:text-3xl lg:text-xl lg:w-2/3 ">
             <div className="py-5 md:py-2 ">
-              <h1 className="text-sm md:text-3xl lg:text-xl">Company</h1>
+              <h1 className="text-sm md:text-2xl lg:text-xl">Company</h1>
               <div className="opacity-[70%] ">
-                <ul className="leading-loose text-sm md:text-2xl lg:text-xl">
+                <ul className="leading-loose text-sm md:text-xl lg:text-xl">
                   <li>
                     <a href="#">About</a>
                   </li>
@@ -201,9 +202,9 @@ const Page = () => {
               </div>
             </div>
             <div className="py-5 md:py-2">
-              <h1 className="text-xl md:text-3xl lg:text-xl">Contact</h1>
+              <h1 className="text-xl md:text-2xl lg:text-xl">Contact</h1>
               <div className="opacity-[70%] ">
-                <ul className="leading-loose text-sm md:text-2xl lg:text-xl">
+                <ul className="leading-loose text-sm md:text-xl lg:text-xl">
                   <li>
                     <a href="#">Help</a>
                   </li>
@@ -221,10 +222,10 @@ const Page = () => {
             </div>
           </div>
           <div className="lg:w-1/3 flex jc lg:justify-end">
-            <div className="md:text-3xl lg:text-xl">
+            <div className="md:text-2xl lg:text-xl">
               <h1>Discover</h1>
               <div className="opacity-[70%] ">
-                <ul className="leading-loose">
+                <ul className="leading-loose text-sm md:text-xl lg:text-xl">
                   <li>
                     <a href="#">Affiliate</a>
                   </li>

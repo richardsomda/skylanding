@@ -20,13 +20,13 @@ const Dropdown: React.FC<DropdownProps> = ({ header, content }) => {
       <div
         onClick={toggleDropdown}
         className="cursor-pointer py-3 flex justify-between items-center  border-b-2
-       border-white border-opacity-[50%] md:text-5xl  lg:text-4xl "
+       border-white border-opacity-[50%] md:text-3xl  lg:text-4xl "
       >
         {header}
         <FaChevronDown />
       </div>
       {isOpen && (
-        <div className="mt-5 text-white  shadow-md rounded-md p-4 opacity-[80%] md:text-4xl lg:text-2xl ">
+        <div className="mt-5 text-white  shadow-md rounded-md p-4 opacity-[80%] md:text-2xl lg:text-2xl ">
           {content}
         </div>
       )}
