@@ -5,7 +5,7 @@ import Contact from "../components/Contact";
 import Dropdown from "../components/Dropdown";
 import ContactForm from "../components/ContactForm"
 import Image from 'next/image';
-// import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   FaFacebook,
   FaInstagram,
