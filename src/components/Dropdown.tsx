@@ -29,9 +29,9 @@ const Dropdown: React.FC<DropdownProps> = ({ header, content }) => {
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
+            animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.4 }}
+            transition={{ duration: 0.5 }}
             className="mt-5 text-white  shadow-md rounded-md p-4 opacity-[80%] md:text-2xl lg:text-2xl "
           >
             {content}
