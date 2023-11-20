@@ -3,25 +3,21 @@ import React, { useState } from 'react';
 // import GoogleMap from '../components/GoogleMap'
 
 const ContactForm: React.FC = () => {
-  // const location = {
-  //   lat: 37.7749, 
-  //   lng: -122.4194, 
-  // };
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message : '',
+    message: '',
   });
 
-  const handleChange = (e) => {
-    const { name, value, message} = e.target;
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
     setFormData({
       ...formData,
       [name]: value,
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
   };
