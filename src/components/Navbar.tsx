@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
-import Link from 'next/link'; 
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
