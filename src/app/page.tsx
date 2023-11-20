@@ -3,7 +3,8 @@ import Navbar from "../components/Navbar";
 import Portfolio from "../components/Portfolio";
 import Contact from "../components/Contact";
 import Dropdown from "../components/Dropdown";
-import ContactForm from "../components/ContactForm"
+import ContactForm from "../components/ContactForm";
+import Image from "next/image";
 // import { motion } from "framer-motion";
 import {
   FaFacebook,
@@ -12,9 +13,8 @@ import {
   FaTwitterSquare,
 } from "react-icons/fa";
 const Page = () => {
-  
   return (
-    <div className ="font-sans">
+    <div className="font-sans">
       {/* navbar */}
       <div className="md:px-10">
         <Navbar />
@@ -22,7 +22,10 @@ const Page = () => {
       {/* navbar */}
 
       {/* hero section  */}
-      <div className="p-5 flex flex-col gap-10 md:p-20 lg:p-40 lg:flex-row " id="home">
+      <div
+        className="p-5 flex flex-col gap-10 md:p-20 lg:p-40 lg:flex-row "
+        id="home"
+      >
         <div className="w-20 h-1 bg-herotext  md:w-40 md:h-2 lg:w-40"></div>
         <div className="">
           <h1 className="text-4xl font-bold pb-3 text-herotext md:text-7xl tracking-wide lg:text-6xl">
@@ -34,20 +37,37 @@ const Page = () => {
             creative firepower to make it happen.
           </p>
           <div>
+<<<<<<< HEAD
             <button className="font-semibold bg-herotext w-auto   p-3 rounded-xl text-white md:text-3xl 
             md:p-5 md:rounded-2xl lg:p-5 lg:text-2xl lg:w-[10rem]">
               Let&apos;s Talk
+=======
+            <button
+              className="font-semibold bg-herotext w-auto   p-3 rounded-xl text-white md:text-3xl 
+            md:p-5 md:rounded-2xl lg:p-5 lg:text-2xl lg:w-[10rem]"
+            >
+              Let's Talk
+>>>>>>> 72ff2c7de454dd09e915fb53196f91bb7a97be08
             </button>
           </div>
         </div>
         <div className=" ">
-          <img src="/image/heroimg.png" alt="" className="lg:w-[170rem]" />
+          {/* <Image src="/image/heroimg.png" alt="" className="lg:w-[170rem]" /> */}
+          <Image
+            src="/image/heroimg.png"
+            alt="Hero Image"
+            width={2000}
+            height={300}
+          />
         </div>
       </div>
       {/* hero section  */}
 
       {/* services */}
-      <div className="bg-black h-auto text-white p-5 py-10 flex flex-col md:p-20 lg:p-40 lg:flex-row lg:gap-5" id="services">
+      <div
+        className="bg-black h-auto text-white p-5 py-10 flex flex-col md:p-20 lg:p-40 lg:flex-row lg:gap-5"
+        id="services"
+      >
         <div className="md:text-2xl lg:text-xl py-5 flex gap-2">
           <span>Our</span>
           <span>ServiSces</span>
@@ -104,7 +124,10 @@ const Page = () => {
       {/* services */}
 
       {/* portfolio */}
-      <div className="p-5 flex flex-col py-20 gap-2 md:p-20 lg:p-40 lg:flex-row  " id="portfolio"> 
+      <div
+        className="p-5 flex flex-col py-20 gap-2 md:p-20 lg:p-40 lg:flex-row  "
+        id="portfolio"
+      >
         <div className="font-medium flex gap-2 cursor-all-scroll md:text-2xl lg:w-1/4 lg:text-xl">
           <span>Our</span>
           <span>Portflio</span>
@@ -152,7 +175,10 @@ const Page = () => {
       {/* portfolio */}
 
       {/* contact */}
-      <div className="bg-black text-white p-5 flex flex-col gap-5 md:p-20 lg:p-40 lg:flex-row" id="contact">
+      <div
+        className="bg-black text-white p-5 flex flex-col gap-5 md:p-20 lg:p-40 lg:flex-row"
+        id="contact"
+      >
         <div className=" md:text-2xl pt-4 flex  gap-1 lg:text-xl lg:w-1/4 ">
           <span>Let&apos;s</span>
           <span>Collaborate</span>
@@ -167,14 +193,15 @@ const Page = () => {
       </div>
       {/* contact */}
 
-
-<ContactForm/>
+      <ContactForm />
 
       {/* footer */}
       <div className="bg-black text-white p-5 md:p-20 lg:px-40 ">
         <div className="lg:flex justify-around items-center lg:gap-20">
           <div className="md:text-3xl lg:1/3 ">
-            <h2 className="font-medium pb-5 md:text-2xl lg:text-2xl ">Sky Tech</h2>
+            <h2 className="font-medium pb-5 md:text-2xl lg:text-2xl ">
+              Sky Tech
+            </h2>
             <p className="text-white  text-md  opacity-[60%] text-sm py-3 md:text-2xl  lg:text-xl">
               SkyTech is where your imagination and our expertise converge to
               create design solutions that elevate your brand and set you apart
