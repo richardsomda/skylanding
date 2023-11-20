@@ -4,6 +4,7 @@ import Portfolio from "../components/Portfolio";
 import Contact from "../components/Contact";
 import Dropdown from "../components/Dropdown";
 import ContactForm from "../components/ContactForm"
+import Image from 'next/image';
 // import { motion } from "framer-motion";
 import {
   FaFacebook,
@@ -41,7 +42,11 @@ const Page = () => {
           </div>
         </div>
         <div className=" ">
-          <img src="/image/heroimg.png" alt="" className="lg:w-[170rem]" />
+          <Image
+           src="/image/heroimg.png"
+           width={2000}
+           height={500}
+           alt="" className="lg:w-[170rem]" />
         </div>
       </div>
       {/* hero section  */}
