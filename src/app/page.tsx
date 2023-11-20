@@ -50,7 +50,7 @@ const Page = () => {
           <Image
             src="/image/heroimg.png"
             alt="Hero Image"
-            width={500}
+            width={2000}
             height={300}
           />
         </div>
