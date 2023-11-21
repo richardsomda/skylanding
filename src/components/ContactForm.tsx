@@ -2,27 +2,9 @@
 import React, { useState } from 'react';
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e: React.FocusEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-  };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-md mx-auto mt-8 p-4 bg-white rounded-md shadow-md">
+    <form  className="max-w-md mx-auto mt-8 p-4 bg-white rounded-md shadow-md">
       <div className="py-5">
         {/* <GoogleMap/> */}
         <h1 className="text-2xl font-semibold">Get In Touch </h1>
@@ -35,8 +17,6 @@ const ContactForm = () => {
           type="text"
           name="name"
           id="name"
-          value={formData.name}
-          onChange={handleChange}
           placeholder="name"
         />
       </label>
@@ -48,8 +28,6 @@ const ContactForm = () => {
           type="email"
           name="email"
           id="email"
-          value={formData.email}
-          onChange={handleChange}
           placeholder="skytech@gmail.com"
         />
       </label>
@@ -60,7 +38,6 @@ const ContactForm = () => {
           name="message"
           id="message"
           rows={5}
-          onChange={handleChange}
           placeholder="Enter Message"
         />
       </label>
