@@ -6,7 +6,6 @@ const ContactForm = () => {
   return (
     <form  className="max-w-md mx-auto mt-8 p-4 bg-white rounded-md shadow-md">
       <div className="py-5">
-        {/* <GoogleMap/> */}
         <h1 className="text-2xl font-semibold">Get In Touch </h1>
         <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.</p>
       </div>
