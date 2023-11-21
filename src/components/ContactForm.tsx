@@ -1,15 +1,13 @@
-'use client'
 import React, { useState } from 'react';
-// import GoogleMap from '../components/GoogleMap'
 
-const ContactForm: React.FC = () => {
+const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
   });
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -17,16 +15,16 @@ const ContactForm: React.FC = () => {
     });
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
   };
 
   return (
     <form onSubmit={handleSubmit} className="max-w-md mx-auto mt-8 p-4 bg-white rounded-md shadow-md">
-      <div className =" py-5  ">
-      {/* <GoogleMap/> */}
-        <h1 className =" text-2xl  font-semibold">Get In Touch </h1>
+      <div className="py-5">
+        {/* <GoogleMap/> */}
+        <h1 className="text-2xl font-semibold">Get In Touch </h1>
         <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.</p>
       </div>
       <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
@@ -51,12 +49,12 @@ const ContactForm: React.FC = () => {
           id="email"
           value={formData.email}
           onChange={handleChange}
-          placeholder=" skytech@gmail.com"
+          placeholder="skytech@gmail.com"
         />
       </label>
-      <label className="block text-gray-700 text-sm font-bold mb-2" >
+      <label className="block text-gray-700 text-sm font-bold mb-2">
         Message:
-        <textarea 
+        <textarea
           className="w-full px-3 py-2 border rounded-md mt-1 focus:outline-none focus:ring focus:border-herotext"
           name="message"
           id="message"
