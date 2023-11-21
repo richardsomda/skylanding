@@ -8,7 +8,7 @@ const ContactForm = () => {
     message: '',
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -16,7 +16,7 @@ const ContactForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FocusEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
   };
